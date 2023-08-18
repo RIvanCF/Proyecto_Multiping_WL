@@ -7,7 +7,8 @@ with open("ip_lista.txt") as file: #Apertura del archivo de texto
     print(dump)
     
     for ip in dump:
-        print('ping -> IP: ', ip)
+        os.system('cls')
+        print('ping => IP: ', ip)
         print('-'*60)
         os.system('ping -n 2 {}'.format(ip)) #Ping a las direcciones IP importadas del archivo .txt
         print('-'*60)
