@@ -1,4 +1,4 @@
-'''Prototitpo personal, con posibilidad de implementar al proyecto original'''
+'''Prototipo personal, para implementar al proyecto original'''
 import os #Importar sistema operativo y obtener una ruta de trabajo
 
 """Importar archivo .txt a la terminal"""
@@ -20,12 +20,12 @@ for ip in dump:
     if(("Tiempo de espera agotado " or "Host de destino inaccesible")) in res: #Condición 1
         print(res) 
         f=open("output.txt", "a") #importar la impresion al documento output.txt
-        f.write(str(ip) + ' -> Desconectado' + '\n' + '-'*40 + '\n') #Imprimir el resultado si cumple con la 'Condicíon 1'
+        f.write(str(ip) + '  Desconectado' + '\n' + '-'*30 + '\n') #Imprimir el resultado si cumple con la 'Condicíon 1'
         f.close()
     else: #De no cumplirse la 'Condición 1'
         print(res)
         f=open("output.txt", "a")
-        f.write(str(ip) + ' -> Conectado' + '\n' + '-'*40 + '\n')
+        f.write(str(ip) + '  Conectado' + '\n' + '-'*30 + '\n')
         f.close()
 
 #Imprimir resultados al documento 'output.txt' 
