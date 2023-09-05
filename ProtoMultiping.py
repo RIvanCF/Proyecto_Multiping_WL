@@ -1,17 +1,17 @@
 '''Prototipo personal, para implementar al proyecto original'''
 import os #Importar sistema operativo y obtener una ruta de trabajo
-
+import time
 """Importar archivo .txt a la terminal"""
-with open("IP_addresses.txt") as file: #Apertura del archivo de texto
+with open("IP_addresses.txt") as file: #Apertura del archivo de textox
     dump = file.read() #Lectura del archivo
     dump = dump.splitlines() 
     print(dump)#Imprimir datos contenidos del archivo .txt a la terminal
     
 """Ping automatico de las direcciones IP"""
 for ip in dump:
-    os.system('cls')#Limpiar la pantalla por cada ping concluido 
+    '''os.system('cls')'''#Limpiar la pantalla por cada ping concluido 
     print('ping => IP: ', ip)#Impresion de la direccion ip a pingear
-    res=os.popen(f'ping -n 2 {ip}').read() #Ping y lectura a las direcciones IP importadas del archivo .txt 
+    res=os.popen(f'ping -n 2 -w 1200 {ip}').read() #Ping y lectura a las direcciones IP importadas del archivo .txt 
 
 
 #Discriminacion de direcciones IP segun su respuesta al ping
@@ -30,6 +30,8 @@ for ip in dump:
 with open ("output.txt") as file:
     output = file.read()
     print(output)
+
+    time.sleep(60)
 
 with open("output.txt", "w") as file:
     pass
