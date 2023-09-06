@@ -10,8 +10,9 @@ with open("IP_addresses.txt") as file: #Apertura del archivo de textox
 """Ping automatico de las direcciones IP"""
 for ip in dump:
     '''os.system('cls')'''#Limpiar la pantalla por cada ping concluido 
+    print('-'*40 + '\n')
     print('ping => IP: ', ip)#Impresion de la direccion ip a pingear
-    res=os.popen(f'ping -n 2 -w 1200 {ip}').read() #Ping y lectura a las direcciones IP importadas del archivo .txt 
+    res=os.popen(f'ping -n 2 {ip}').read() #Ping y lectura a las direcciones IP importadas del archivo .txt 
 
 
 #Discriminacion de direcciones IP segun su respuesta al ping
