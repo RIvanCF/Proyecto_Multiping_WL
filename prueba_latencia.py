@@ -32,7 +32,7 @@ def parsearElementos(p):
 while True:
     if(conteo < 10):
         try:
-            p = subprocess.check_output("ping -c 1 10.1.1.100", shell=True)
+            p = subprocess.check_output("ping  1 10.1.1.100", shell=True)
             p = p.split(" ")
             parsearElementos(p)
             print (conteo)
