@@ -25,12 +25,12 @@ for ip in dump:
     if("Tiempo de espera agotado " or "inaccesible." or ping_host(ip) >= 1200.0) in res: #Condición 1
         print(res)
         f=open("output.txt", "a") #importar la impresion al documento output.txt
-        f.write(str(ip) + ' [ERROR]' + ' SLOW' + '\n' ) #Imprimir el resultado si cumple con la 'Condicíon 1'
+        f.write(str(ip) + ' [ERROR]' + ' DOWN' + '\n' ) #Imprimir el resultado si cumple con la 'Condicíon 1'
         f.close()
     else: #De no cumplirse la 'Condición 1'
         print(res)
         f=open("output.txt", "a")
-        f.write(str(ip)  + ' [OK] ' + str(ping_host(ip)) + '\n')
+        f.write(str(ip)  + ' [OK] ' + str(ping_host(ip)) + '\n') #Se imprime la IP, estado de conexión, velocidad de respuesta Máxima
         f.close()
     
 #Imprimir resultados al documento 'output.txt' 
