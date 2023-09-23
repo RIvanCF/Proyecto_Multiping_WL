@@ -18,7 +18,7 @@ def ping_host(dump):
 for ip in dump:
     '''os.system('cls')'''#Limpiar la pantalla por cada ping concluido 
     if(ip <= "0"):
-        print("esto vale cero, ahi muere")
+        print("|------      El programa finalizó su ejecución      ------|" + "\n"*2)
         break
     else:
         print('-'*40 + '\n')
