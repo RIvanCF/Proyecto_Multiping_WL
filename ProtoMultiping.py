@@ -4,6 +4,7 @@ import time
 from pythonping import ping #Biblioteca que permitira calcular la letencia de cada direccion IP
 """Importar archivo .txt a la terminal"""
 
+
 with open("IP_addresses.txt") as file: #Apertura del archivo de textox
     dump = file.read() #Lectura del archivo
     dump = dump.splitlines() 
@@ -43,7 +44,7 @@ with open ("output.txt") as file:
         output = file.read()
         print(output)
 
-        time.sleep(10) #Tiempo de visualización antes de borrarse el contenido 
+        time.sleep(5) #Tiempo de visualización antes de borrarse el contenido 
 
 with open("output.txt", "w") as file: 
         pass
